@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HR Student Organisation
 
-## Getting Started
+A unified repository of HR students in Kenya. Built with Next.js, React, and Supabase.
 
-First, run the development server:
+## Setup
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file:
 
-## Learn More
+```
+NEXT_PUBLIC_SUPABASE_URL=https://kbnejhiozoxhrmkzlqnq.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Test Accounts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Super Admin
+- **Email:** vomollo101@gmail.com
+- **Password:** 12345678
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Students (password: `password123!`)
+| Email | Name | Institution |
+|-------|------|-------------|
+| student1@test.com | Jane Wanjiku | University of Nairobi |
+| student2@test.com | Brian Ochieng | Kenyatta University |
+| student3@test.com | Mary Akinyi | Strathmore University |
+| student4@test.com | Peter Kamau | JKUAT |
+| student5@test.com | Grace Muthoni | Kenya Institute of Management |
+| student6@test.com | David Kiprop | Kenya Polytechnic University College |
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy to Netlify with the included `netlify.toml` configuration.
