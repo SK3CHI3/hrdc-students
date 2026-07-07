@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 import jsPDF from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
@@ -172,7 +173,7 @@ export default function AdminPage() {
     const doc = new jsPDF()
     
     doc.setFontSize(18)
-    doc.text('HR Student Organisation - Student List', 14, 22)
+    doc.text('KHRSA - HR Students Association of Kenya - Student List', 14, 22)
     
     doc.setFontSize(11)
     doc.text(`Generated: ${new Date().toLocaleDateString()}`, 14, 32)
@@ -215,9 +216,12 @@ export default function AdminPage() {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-jungle-green-dark">HR Student Organisation</h1>
-            <p className="text-sm text-gray-600">Super Admin Dashboard</p>
+          <div className="flex items-center gap-3">
+            <Image src="/hr_logo.png" alt="KHRSA" width={44} height={44} className="rounded-full" />
+            <div>
+              <h1 className="text-2xl font-bold text-jungle-green-dark">KHRSA</h1>
+              <p className="text-sm text-gray-600">Super Admin Dashboard</p>
+            </div>
           </div>
           <button
             onClick={handleLogout}

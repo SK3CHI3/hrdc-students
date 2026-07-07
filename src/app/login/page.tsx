@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -50,10 +51,13 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-jungle-green-bg to-white px-4">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-jungle-green-dark">
-            HR Student Organisation
-          </h1>
-          <p className="text-gray-600 mt-2">Unified Repository of HR Students in Kenya</p>
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <Image src="/hr_logo.png" alt="KHRSA" width={64} height={64} className="rounded-full" />
+            <h1 className="text-3xl font-bold text-jungle-green-dark">
+              KHRSA
+            </h1>
+          </div>
+          <p className="text-gray-600 mt-2">HR Students Association of Kenya</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8">

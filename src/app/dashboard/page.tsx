@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 interface Student {
   id: string
@@ -92,9 +93,12 @@ export default function DashboardPage() {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div>
-            <h1 className="text-2xl font-bold text-jungle-green-dark">HR Student Organisation</h1>
-            <p className="text-sm text-gray-600">Student Dashboard</p>
+          <div className="flex items-center gap-3">
+            <Image src="/hr_logo.png" alt="KHRSA" width={44} height={44} className="rounded-full" />
+            <div>
+              <h1 className="text-2xl font-bold text-jungle-green-dark">KHRSA</h1>
+              <p className="text-sm text-gray-600">Student Dashboard</p>
+            </div>
           </div>
           <button
             onClick={handleLogout}
@@ -121,7 +125,7 @@ export default function DashboardPage() {
               {student.unique_student_code}
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              Use this code for all official HR Student Organisation communications
+              Use this code for all official KHRSA communications
             </p>
           </div>
         </div>

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HR Student Organisation - Kenya",
+  title: "KHRSA - HR Students Association of Kenya",
   description: "Unified repository of HR students in Kenya",
 };
 
